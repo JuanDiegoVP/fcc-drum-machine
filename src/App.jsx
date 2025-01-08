@@ -1,5 +1,5 @@
 import "./App.css";
-import Pads from "./components/pads";
+import Pads from "./components/Pads";
 
 const audio = [
   {
@@ -68,12 +68,18 @@ function App() {
     >
       <h1>Drum Machine</h1>
       <div className=" container d-flex">
-        <div className="drum-container d-flex flex-wrap justify-content-between" style={{ height:"250px", width: "50%"}}>
+        <div
+          className="drum-container d-flex flex-wrap justify-content-between"
+          style={{ height: "250px", width: "50%" }}
+        >
           {audio.map((clip) => (
             <Pads key={clip.key} clip={clip} />
           ))}
         </div>
-        <div id={"display"} className=" d-flex justify-content-center w-50"></div>
+        <div
+          id={"display"}
+          className=" d-flex justify-content-center w-50"
+        ></div>
       </div>
     </div>
   );
